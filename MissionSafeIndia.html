@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <section class="section causes background--brown " id="safeIndia">
+			<div class="container">
+				<div class="row align-items-start margin-bottom">
+					<div class="col-xl-12">
+						<div class="heading heading--center"><span class="heading__pre-title">Our Mission</span>
+							<h2 class="heading__title"><span>Safe</span> <span>India</span></h2>
+						</div>
+					</div>
+				</div>
+				<div class="row offset-margin">
+					<div class="col-md-4 text-center">
+						<div class="counter-item counter-item--style-3">
+							<div class="counter-item__top">
+								<h6 class="counter-item__title">Warriors Onboard</h6>
+							</div>
+							<div class="counter-item__lower"><span class="js-counter code2">0</span></div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="counter-item counter-item--style-3">
+							<div class="counter-item__top">
+								<h6 class="counter-item__title">Centers we operate</h6>
+							</div>
+							<div class="counter-item__lower"><span class="js-counter code">0</span></div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="counter-item counter-item--style-3">
+							<div class="counter-item__top">
+								<h6 class="counter-item__title">Souls Touched</h6>
+							</div>
+							<div class="counter-item__lower"><span class="js-counter code1">0</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <script>
+        $({ countNum: $('.code').html() }).animate({ countNum: 70 }, {
+            duration: 2000,
+            easing: 'linear',
+            step: function () {
+            $('.code').html(Math.floor(this.countNum) + "+");
+        },
+        complete: function () {
+            $('.code').html(this.countNum + "+");
+            //alert('finished');
+        }
+        });
+
+        $({ countNum: $('.code1').html() }).animate({ countNum: 500 }, {
+            duration: 1900,
+            easing: 'linear',
+            step: function () {
+            $('.code1').html(Math.floor(this.countNum) + "k+");
+        },
+        complete: function () {
+            $('.code1').html(this.countNum + "k+");
+            //alert('finished');
+        }
+        });
+
+        $({ countNum: $('.code2').html() }).animate({ countNum: 70 }, {
+            duration: 2000,
+            easing: 'linear',
+            step: function () {
+            $('.code2').html(Math.floor(this.countNum) + "k+");
+        },
+        complete: function () {
+            $('.code2').html(this.countNum + "k+");
+            //alert('finished');
+        }
+        });
+    </script>
+    </body>
+</html>
